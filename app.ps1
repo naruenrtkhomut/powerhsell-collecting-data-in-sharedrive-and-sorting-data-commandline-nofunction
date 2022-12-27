@@ -122,7 +122,7 @@ class Program {
             $this.Update($gettingFiles.dialySNs, $gettingFiles.tmp)
 
             foreach($file in $gettingFiles.tmp) {
-                copy $file $this.tmpFolder
+                Copy-Item -Path $file -Destination $this.tmpFolder
                 Write-Host ([string]::Format("Copy file: {0}", $file))
             }
         }
